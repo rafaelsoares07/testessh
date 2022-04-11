@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import BuscarCEP from './BuscarCEP';
+import DadosCEP from './DadosCEP';
+import GetCPF from './requestCep';
+
+function pedirCEP(){
+  return prompt('digite seu cep')
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+  return(
+    <div>
+     
+      <BuscarCEP />
+      <DadosCEP />
+      
+      <GetCPF cpf={pedirCEP()} />
+      
     </div>
-  );
+  )
+  
 }
 
 export default App;
